@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {Link} from 'react-router-dom';
-import { auth, signInWithFacebook, signInWithGoogle } from '../../firebase/firebase.utils';
+import { auth,  signInWithGoogle } from '../../firebase/firebase.utils';
 //import './sign-in.scss';
 class SignIn extends React.Component {
   constructor(props) {
@@ -66,14 +66,14 @@ class SignIn extends React.Component {
                 </div>
                 <div classname='btn' align="center" >
                 <Link to='/homepage'>
-          <button type="button" class="btn btn-outline-primary mr-1">Sign in</button>
+          <button 
+          type="button" 
+          class="btn btn-outline-primary mr-1">Sign in</button>
+                </Link>
+                <Link to="/homepage">
+                <button type="button" class="btn btn-outline-primary mr-1" onClick={signInWithGoogle} isGoogleSignIn> Sign in with Google</button>
                 </Link>
                 
-                <button type="button" class="btn btn-outline-primary mr-1" onClick={signInWithGoogle} isGoogleSignIn> Sign in with Google</button>
-
-                
-            <button type="button" class="btn btn-outline-primary" onClick={signInWithFacebook} isFacebookSignIn>Sign in with Facebook</button>
-
             <div className='title'>Don't have a account?</div>
             <Link to='/signup'>
             <button type="button" class="btn btn-outline-primary">Sign Up</button>

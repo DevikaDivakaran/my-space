@@ -43,11 +43,11 @@ export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
 const provider = new firebase.auth.GoogleAuthProvider();
-const providers = new firebase.auth.FacebookAuthProvider();
+//const providers = new firebase.auth.FacebookAuthProvider();
 
 provider.setCustomParameters({ prompt: 'select_account' });
-providers.setCustomParameters({ prompt: 'select_account' });
+//providers.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
-export const signInWithFacebook = () => auth.signInWithPopup(providers);
+//export const signInWithFacebook = () => auth.signInWithPopup(providers);
 
 export default firebase;

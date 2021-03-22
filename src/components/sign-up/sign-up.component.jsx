@@ -92,7 +92,7 @@ class SignUp extends React.Component {
                 </div>
                 <div className="form-group">
                     <label>Confirm Password</label>
-                    <input type="password" className="form-control" placeholder="Confirm password" required />
+                    <input type="confirmpassword" className="form-control" placeholder="Confirm password" required />
                 </div>
 
             <Link to='/'>
